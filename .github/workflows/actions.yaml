@@ -1,6 +1,9 @@
 name: Actions Workflow
 
 on: 
+  repository_dispatch:
+    types: [build]
+
   push:
   pull_request:
   schedule:
