@@ -7,7 +7,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: "*/15 * * * * "
+    - cron: "*/15 * * * *"
 jobs:
   run-github-actions:
     continue-on-error: true
