@@ -1,16 +1,10 @@
 name: Actions Workflow
 
 on: 
-  repository_dispatch:
-    types: [build]
-
-  push:
-  pull_request:
   schedule:
     - cron: "*/15 * * * *"
 jobs:
   run-github-actions:
-    continue-on-error: true
     runs-on: ubuntu-latest
     steps:
       - name: List Files
