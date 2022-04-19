@@ -1,0 +1,17 @@
+name: Test Zip
+on: push
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+    steps:
+      - name: Generate file
+        shell: bash
+        run: |
+          Teste "Batata" > teste.txt
+      - name: Zip file
+        run: |
+          7zip a teste.zip teste.txt
+          ls
