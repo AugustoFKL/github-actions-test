@@ -7,11 +7,9 @@ jobs:
       matrix:
         os: [macos-latest, windows-latest, ubuntu-latest]
     steps:
-      - name: Generate file
-        shell: bash
-        run: |
-          Teste "Batata" > teste.txt
+      - name: Checkout
+        uses: actions/checkout@v1
       - name: Zip file
         run: |
-          7zip a teste.zip teste.txt
+          7zip a teste.zip random.txt
           ls
