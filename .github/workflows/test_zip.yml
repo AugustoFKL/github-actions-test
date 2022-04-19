@@ -11,5 +11,5 @@ jobs:
         uses: actions/checkout@v1
       - name: Zip file
         run: |
-          7zip a teste.zip random.txt
+          7z a teste.zip random.txt
           ls
